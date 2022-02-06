@@ -16,8 +16,8 @@ public class SunController : MonoBehaviour
         
     }
 
-    void CheckSOLOwnership()
+    void CheckSOLOwnership(bool isOwner)
     {
-        
+        SunSprite.SetActive(isOwner);
     }
 }
