@@ -5,13 +5,16 @@ public class ui : MonoBehaviour
 {
     public SunController sunController;
 
-    [DllImport("__Internal")]
-    private static extern void Hello();
-
-    void Start()
-    {
-        Hello();
-
-        Debug.Log("ui start finished");
-    }
+    //TODO: Working version from .jslib
+    // [DllImport("__Internal")]
+    // private static extern bool Hello();
+    //
+    // void Start()
+    // {
+    //     Hello();
+    //     //sunController.SetSOLOwnership();
+    //     //TODO: Call unity from JS instead.
+    //
+    //     Debug.Log("ui start finished");
+    // }
 }

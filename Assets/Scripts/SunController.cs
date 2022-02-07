@@ -7,7 +7,6 @@ public class SunController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SunSprite.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,8 +15,15 @@ public class SunController : MonoBehaviour
         
     }
 
-    void CheckSOLOwnership(bool isOwner)
+    public void SetSOLOwnership(string isOwner)
     {
-        SunSprite.SetActive(isOwner);
+        if (isOwner == "true")
+        {
+            SunSprite.SetActive(true);
+        }
+        else
+        {
+            SunSprite.SetActive(false);
+        }
     }
 }
