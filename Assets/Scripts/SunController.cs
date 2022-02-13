@@ -1,8 +1,11 @@
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SunController : MonoBehaviour
 {
     public GameObject SunSprite;
+    public Text txtWallet;
     
     // Start is called before the first frame update
     void Start()
@@ -15,14 +18,27 @@ public class SunController : MonoBehaviour
         
     }
 
-    public void SetSOLOwnership(string isOwner)
+    public void SetWallet(string wallet)
     {
-        if (isOwner == "true")
+        if (String.IsNullOrWhiteSpace(wallet))
+        {
+            txtWallet.text = "no wallet ID";
+        }
+        else
+        {
+            txtWallet.text = wallet;
+        }
+    }
+
+    public void SetSOLOwnership(string walletFound)
+    {
+        if (walletFound == "true")
         {
             SunSprite.SetActive(true);
         }
         else
         {
+            //TODO: Check NFT ownership
             SunSprite.SetActive(false);
         }
     }
